@@ -1,0 +1,254 @@
+<mxfile host="draw.io" modified="2026-03-05T09:10:00.000Z" agent="openclaw" version="24.7.1" type="device">
+  <diagram name="Architecture" id="arch-v2">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="800" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ==================== EXTERNAL (left side) ==================== -->
+
+        <!-- Telegram Users -->
+        <mxCell id="users" value="Telegram&lt;br&gt;Users" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3E;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;" vertex="1" parent="1">
+          <mxGeometry x="30" y="200" width="50" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== AWS Cloud ==================== -->
+        <mxCell id="aws-cloud" value="" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;stroke=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;spacingTop=5;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="30" width="1240" height="740" as="geometry" />
+        </mxCell>
+
+        <!-- CloudFront -->
+        <mxCell id="cf" value="Amazon&lt;br&gt;CloudFront" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;" vertex="1" parent="1">
+          <mxGeometry x="170" y="201" width="48" height="48" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== VPC ==================== -->
+        <mxCell id="vpc" value="" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc2;stroke=#8C4FFF;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;spacingTop=5;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="60" width="770" height="690" as="geometry" />
+        </mxCell>
+
+        <!-- Internal ALB -->
+        <mxCell id="alb" value="Internal ALB" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elb;" vertex="1" parent="1">
+          <mxGeometry x="300" y="201" width="48" height="48" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== EKS Cluster ==================== -->
+        <mxCell id="eks" value="" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_eks_cluster;stroke=#FF9900;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;spacingTop=5;dashed=0;labelPosition=left;" vertex="1" parent="1">
+          <mxGeometry x="390" y="90" width="620" height="640" as="geometry" />
+        </mxCell>
+
+        <!-- EKS label -->
+        <mxCell id="eks-label" value="Amazon EKS" style="text;html=1;fontSize=13;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#FF9900;" vertex="1" parent="1">
+          <mxGeometry x="430" y="93" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Control Plane group ========== -->
+        <mxCell id="cp" value="Control Plane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#545B64;verticalAlign=top;fontStyle=1;fontSize=11;dashed=1;arcSize=5;labelPosition=center;align=center;" vertex="1" parent="1">
+          <mxGeometry x="410" y="120" width="250" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- Router -->
+        <mxCell id="router" value="Router ×2&lt;br&gt;&lt;sub&gt;webhook ingress&lt;br&gt;async forward&lt;/sub&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E7F3E7;strokeColor=#4CAF50;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="430" y="160" width="130" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Orchestrator -->
+        <mxCell id="orch" value="Orchestrator ×2&lt;br&gt;&lt;sub&gt;lifecycle · Informer&lt;br&gt;reconciler · warm pool&lt;/sub&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E7F3E7;strokeColor=#4CAF50;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="430" y="235" width="130" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Redis -->
+        <mxCell id="redis" value="Redis" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#C925D1;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elasticache;" vertex="1" parent="1">
+          <mxGeometry x="590" y="175" width="40" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Data Plane group ========== -->
+        <mxCell id="dp" value="Data Plane · Bare Metal Nodes · Kata Containers VMs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FF9900;verticalAlign=top;fontStyle=1;fontSize=11;dashed=1;arcSize=5;" vertex="1" parent="1">
+          <mxGeometry x="410" y="370" width="580" height="340" as="geometry" />
+        </mxCell>
+
+        <!-- Tenant Pod 1 -->
+        <mxCell id="pod1" value="🧠 Tenant Pod&lt;br&gt;&lt;sub&gt;Kata VM · OpenClaw&lt;br&gt;1 User : 1 Pod&lt;/sub&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#E57373;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="430" y="440" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Tenant Pod 2 -->
+        <mxCell id="pod2" value="🧠 Tenant Pod&lt;br&gt;&lt;sub&gt;Kata VM · OpenClaw&lt;/sub&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#E57373;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="590" y="440" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Tenant Pod N (stacked) -->
+        <mxCell id="pod3" value="..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#E57373;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="440" width="50" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Warm Pool -->
+        <mxCell id="wp" value="💤 Warm Pool ×N&lt;br&gt;&lt;sub&gt;pre-provisioned Kata pods&lt;br&gt;PriorityClass preemption&lt;/sub&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#9575CD;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="430" y="530" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- VPC CNI NetworkPolicy -->
+        <mxCell id="netpol" value="VPC CNI NetworkPolicy&lt;br&gt;&lt;sub&gt;eBPF · cross-tenant isolation&lt;/sub&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FFB74D;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="430" y="610" width="170" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Karpenter -->
+        <mxCell id="karpenter" value="Karpenter&lt;br&gt;&lt;sub&gt;kata-metal NodePool&lt;br&gt;bare metal autoscale&lt;/sub&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#9E9E9E;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="530" width="140" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Pod Identity -->
+        <mxCell id="pi" value="EKS Pod Identity&lt;br&gt;&lt;sub&gt;session tags → S3 ABAC&lt;/sub&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#9E9E9E;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="610" width="140" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== AWS Managed Services (right side) ==================== -->
+
+        <!-- DynamoDB -->
+        <mxCell id="ddb" value="Amazon&lt;br&gt;DynamoDB" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#C925D1;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="120" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="ddb-sub" value="&lt;sub&gt;tenant-registry&lt;br&gt;GSI: status-index&lt;/sub&gt;" style="text;html=1;fontSize=10;fillColor=none;strokeColor=none;fontColor=#666666;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="180" width="90" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- S3 -->
+        <mxCell id="s3" value="Amazon S3" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#3F8624;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="280" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="s3-sub" value="&lt;sub&gt;per-tenant state&lt;br&gt;ABAC isolation&lt;/sub&gt;" style="text;html=1;fontSize=10;fillColor=none;strokeColor=none;fontColor=#666666;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="340" width="90" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Bedrock -->
+        <mxCell id="bedrock" value="Amazon&lt;br&gt;Bedrock" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#01A88D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sagemaker;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="440" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="bedrock-sub" value="&lt;sub&gt;LLM inference&lt;br&gt;Claude&lt;/sub&gt;" style="text;html=1;fontSize=10;fillColor=none;strokeColor=none;fontColor=#666666;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1095" y="500" width="80" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ECR -->
+        <mxCell id="ecr" value="Amazon&lt;br&gt;ECR" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#ED7100;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecr;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="590" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="ecr-sub" value="&lt;sub&gt;container images&lt;/sub&gt;" style="text;html=1;fontSize=10;fillColor=none;strokeColor=none;fontColor=#666666;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1095" y="650" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== Annotations ==================== -->
+        <mxCell id="note-density" value="&lt;i&gt;~210 Kata pods / c6i.metal node&lt;/i&gt;" style="text;html=1;fontSize=10;fillColor=none;strokeColor=none;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="820" y="470" width="170" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note-start" value="&lt;i&gt;Cold start: ~40s (warm pool)&lt;br&gt;~5min (Karpenter provision)&lt;/i&gt;" style="text;html=1;fontSize=10;fillColor=none;strokeColor=none;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="800" y="535" width="170" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== CONNECTIONS ==================== -->
+
+        <!-- Users → CloudFront -->
+        <mxCell id="c1" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#232F3E;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="users" target="cf" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c1l" value="&lt;font style=&quot;font-size:9px;color:#666&quot;&gt;webhook&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c1">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- CloudFront → ALB -->
+        <mxCell id="c2" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8C4FFF;strokeWidth=2;" edge="1" source="cf" target="alb" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2l" value="&lt;font style=&quot;font-size:9px;color:#666&quot;&gt;VPC Origin&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c2">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- ALB → Router -->
+        <mxCell id="c3" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;strokeWidth=2;" edge="1" source="alb" target="router" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Router → Redis -->
+        <mxCell id="c4" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#C925D1;strokeWidth=1;dashed=1;" edge="1" source="router" target="redis" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;IP cache&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c4">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Router → Orchestrator -->
+        <mxCell id="c5" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;strokeWidth=1;" edge="1" source="router" target="orch" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;/wake&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c5">
+          <mxGeometry x="-0.2" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Router → Tenant Pod (forward) -->
+        <mxCell id="c6" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E57373;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="router" target="pod1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c6l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;forward :8787&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c6">
+          <mxGeometry x="-0.2" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Orchestrator → DynamoDB -->
+        <mxCell id="c7" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#C925D1;strokeWidth=1;dashed=1;" edge="1" source="orch" target="ddb" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c7l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;tenant CRUD&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c7">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Orchestrator → Tenant Pod -->
+        <mxCell id="c8" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;strokeWidth=1;dashed=1;" edge="1" source="orch" target="pod1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c8l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;create pod&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c8">
+          <mxGeometry x="0.2" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Orchestrator → Warm Pool -->
+        <mxCell id="c9" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9575CD;strokeWidth=1;dashed=1;" edge="1" source="orch" target="wp" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c9l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;consume&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c9">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Pod → S3 -->
+        <mxCell id="c10" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3F8624;strokeWidth=1;dashed=1;" edge="1" source="pod1" target="s3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c10l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;s3 sync + PreStop&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c10">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Pod → Bedrock -->
+        <mxCell id="c11" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#01A88D;strokeWidth=1;dashed=1;" edge="1" source="pod2" target="bedrock" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c11l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;InvokeModel&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c11">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Karpenter → Data Plane -->
+        <mxCell id="c12" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9E9E9E;strokeWidth=1;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" source="karpenter" target="pod2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c12l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;provisions&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c12">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Pod Identity → Pod -->
+        <mxCell id="c13" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9E9E9E;strokeWidth=1;dashed=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" source="pi" target="pod1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c13l" value="&lt;font style=&quot;font-size:9px;color:#999&quot;&gt;inject creds&lt;br&gt;+ session tags&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="c13">
+          <mxGeometry x="0.2" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
